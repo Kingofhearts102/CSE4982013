@@ -25,7 +25,10 @@ namespace IBMConsultantTool
 
         private void categoryAddButton_Click(object sender, EventArgs e)
         {
-            Category category = new Category(this, categoryNames.Text);
+            Category category = new Category(/*this, categoryNames.Text*/);
+            category.Owner = this;
+            category.Name = categoryNames.Text;
+            category.Location = category.FindLocation();
             categories.Add(category);
             categoryCount++;
             category.Click += new EventHandler(category_Click);
@@ -53,17 +56,12 @@ namespace IBMConsultantTool
 
         private void objectiveAddButton_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(categoryCount.ToString());
-            lastFocused.AddObjective(objectiveNames.Text);
+            //Console.WriteLine(categoryCount.ToString());
+            if(lastFocused != null)
+                lastFocused.AddObjective(objectiveNames.Text);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            foreach (Category cat in categories)
-            {
-                Console.WriteLine(cat.Name);
-            }
-        }
+
         public Category LastClickedCategory
         {
             set
@@ -83,6 +81,17 @@ namespace IBMConsultantTool
             get
             {
                 return categories;
+            }
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("save");
+            XMLManager man = new XMLManager();
+            foreach (Category cat in categories)
+            {
+
+                man.Save(cat, "s");
             }
         }
 

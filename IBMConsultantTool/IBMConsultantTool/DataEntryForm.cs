@@ -31,6 +31,7 @@ namespace IBMConsultantTool
                 dataGrid.Rows.Add(1);
                 dataGrid.Rows[rowCount].Cells[0].Value = mainForm.Categories[i].Name;
                 dataGrid.Rows[rowCount].ReadOnly = true;
+               // dataGrid.Rows[rowCount].Cells[0].Style = 
                 rowCount++;
                 
 

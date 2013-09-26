@@ -115,6 +115,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XMLManager.cs" />
     <EmbeddedResource Include="AddInitiative.resx">
       <DependentUpon>AddInitiative.cs</DependentUpon>
     </EmbeddedResource>

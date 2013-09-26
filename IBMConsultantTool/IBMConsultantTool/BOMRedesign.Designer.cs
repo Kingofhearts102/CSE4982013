@@ -34,7 +34,7 @@
             this.categoryNames = new System.Windows.Forms.ComboBox();
             this.objectiveNames = new System.Windows.Forms.ComboBox();
             this.initiativeNames = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
             this.dataInputButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -113,15 +113,15 @@
             this.initiativeNames.TabIndex = 5;
             this.initiativeNames.Text = "Select Initiatives";
             // 
-            // button1
+            // saveButton
             // 
-            this.button1.Location = new System.Drawing.Point(741, 324);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.saveButton.Location = new System.Drawing.Point(741, 324);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(75, 23);
+            this.saveButton.TabIndex = 6;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // dataInputButton
             // 
@@ -139,7 +139,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(824, 375);
             this.Controls.Add(this.dataInputButton);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.saveButton);
             this.Controls.Add(this.initiativeNames);
             this.Controls.Add(this.objectiveNames);
             this.Controls.Add(this.categoryNames);
@@ -160,7 +160,7 @@
         private System.Windows.Forms.ComboBox categoryNames;
         private System.Windows.Forms.ComboBox objectiveNames;
         private System.Windows.Forms.ComboBox initiativeNames;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button dataInputButton;
 
 
