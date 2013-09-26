@@ -11,7 +11,6 @@ namespace IBMConsultantTool
     {
         private BusinessObjective owner;
         private string name;
-        private static int initiativeHeight = 20;
 
         private float criticality = 0;
         private float differentiation = 0;
@@ -21,12 +20,6 @@ namespace IBMConsultantTool
         {
             this.owner = owner;
             this.name = name;
-            owner.Controls.Add(this);            
-            this.Text = name;
-            this.Location = owner.InitiativePlacement(this);
-            this.BackColor = Color.CornflowerBlue;
-            this.Height = initiativeHeight;
-            this.Width = owner.Width ;
         }
 
         public float Criticality
@@ -73,8 +66,6 @@ namespace IBMConsultantTool
                 return name;
             }
         }
-       
-        
 
 
     }
